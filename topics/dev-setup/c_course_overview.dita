@@ -13,7 +13,9 @@
         </metadata>
     </prolog>
     <conbody>
-        <p>This 20-minute rapid setup guide walks you through the minimum steps required to run Python scripts on your own files. No prior programming experience is needed.</p>
+        <p>You are not a developer and don't plan to become one? Nevertheless you need to find your way around scripting and language processing? Then this minicourse is for you!</p>
+        <p>Get real work done: Run scripts on your own files and output results. No boring coding exercises or tutorials. Just hands-on instruction that you can put to use right away.</p>
+        <p>This 20-minute rapid setup guide walks you through the minimum steps required to run Python scripts on your own files and output the results as files. No prior programming experience is needed.</p>
         <section id="what-you-will-learn">
             <title>What You Will Learn</title>
             <ul>
@@ -23,11 +25,12 @@
                 <li>How to install Python and the required NLP packages</li>
                 <li>How to read error messages and fix common problems</li>
                 <li>How to activate GitHub Copilot to assist you</li>
+                <li>How to run a script on your file</li>
             </ul>
         </section>
         <section id="prerequisites">
             <title>Prerequisites</title>
-            <p>No programming knowledge is required. You only need a Windows or macOS computer with internet access.</p>
+            <p>No programming knowledge is required. You only need a computer with internet access.</p>
         </section>
     </conbody>
 </concept>

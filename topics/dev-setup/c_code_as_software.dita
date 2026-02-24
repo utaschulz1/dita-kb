@@ -12,21 +12,60 @@
             <category>Mental Model</category>
         </metadata>
     </prolog>
+    <shortdesc>In this section you will learn to look at programming languages (Python), the ubiquitous libraries (spaCy, Pandas) and functions like you'd look at any other software with menus and buttons.</shortdesc>
     <conbody>
-        <p>Code is not magic. It is a set of precise instructions written in a language a computer can execute. As a translator or linguist, you already work with language rules — Python is simply another rule-based system.</p>
+        <p>Code is a set of precise instructions written in a language a computer can execute — but not directly. Before the processor understands the code, it must be translated into low-level machine language — through many layers. The code in a programming language is already a very high-level layer, just about one or two layers lower than a graphical software interface.</p>
+        <p>The difference between a graphical software interface and code is that code can be used to build many software applications. A graphical software interface, on the other hand, has its usecases built in.</p>
+        <p>However, to write code in Python, you need to install a software — Python version 3.12 in our case — just as you would install any other software on your computer. If you want more features, you can install additional libraries (packages), just as you would install an addtional plugin in MS Word or your CAT tool.</p>
+
         <section id="analogy">
-            <title>A Useful Analogy</title>
-            <p>Think of a Python script the same way you think of a macro in Word or Excel: a saved sequence of actions that automates repetitive work. You do not need to write the macro yourself — you only need to run it.</p>
+            <title>Libraries, functions and scripts</title>
+            <p>So — if you think of Python as a software like MS Word or your CAT tool without graphical user interface, you'd think of a Python library as a plugin that adds specific features to that software.</p>
+            <p> A Python function is like a button in that software — it performs a specific task when you run it. Python comes with many built-in functions, like print() or sort(), and you can also define your own functions.</p>
+            <p>Think of a Python script the same way you think of a macro in Word or Excel, or a custom workflow in your CAT tool: a saved sequence of actions that automates repetitive work. Someone has to write the script, but anybody can use it — you only need to run it on your file.</p>
         </section>
         <example id="code-example">
             <title>Example: What a Script Actually Does</title>
             <p>A term-extraction script does the following three things in order:</p>
             <ol>
-                <li>Opens your text file</li>
-                <li>Reads every sentence and identifies noun phrases</li>
+                <li>Opens your text file and reads it all at once or sequentially</li>
+                <li>Performs actions, like identifying noun phrases</li>
                 <li>Writes the results to a new file</li>
             </ol>
-            <p>Each line of code is one instruction in that sequence.</p>
+            <p>Each line of code is one instruction in that sequence. There can be many lines. Lines that start with # are comments and are ignored by the computer.</p>
+            <codeblock language="python">
+                # Example of a simple term extraction script
+                # First, tell the program which libraries you want to use
+                import spacy
+                from collections import Counter
+                import pandas as pd
+
+                # Load spaCy model for English
+                nlp = spacy.load("en_core_web_sm")
+
+                # Read the text from the file
+                with open("input/source_claims.txt", "r", encoding="utf-8") as file:
+                    text = file.read()
+
+                # Process the text with spaCy
+                doc = nlp(text)
+
+                # Extract noun phrases
+                noun_phrases = [chunk.text.strip() for chunk in doc.noun_chunks]
+
+                # Count frequencies
+                phrase_freq = Counter(noun_phrases)
+
+                # Convert to DataFrame with pandas
+                df_noun_phrases = pd.DataFrame(phrase_freq.items(), columns=["Noun Phrase", "Frequency"])
+                df_noun_phrases = df_noun_phrases.sort_values(by="Frequency", ascending=False)
+
+                # Save to CSV
+                df_noun_phrases.to_csv("output/noun_phrases_frequencies.csv", index=False)
+
+                # Display top 10 noun phrases
+                print(df_noun_phrases.head(10))
+            </codeblock>
         </example>
     </conbody>
 </concept>
