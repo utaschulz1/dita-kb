@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_why_virtual_environments">
+    <title>Why Virtual Environments Matter</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Package Management</category>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>A <b>virtual environment</b> is an isolated container for a specific project. It holds its own Python version and its own set of installed packages, completely separate from everything else on your computer.</p>
+        <section id="the-problem">
+            <title>The Problem Virtual Environments Solve</title>
+            <p>Different projects often require different versions of the same package. Without isolation, installing a package for one project can break another. Virtual environments prevent this conflict by giving each project its own private space.</p>
+        </section>
+        <section id="analogy">
+            <title>Analogy: A Dedicated Toolbox</title>
+            <p>Think of a virtual environment as a dedicated toolbox for a single job. The tools inside (packages) are specific to that job and do not interfere with the tools in any other toolbox.</p>
+        </section>
+        <example id="env-example">
+            <title>This Course's Environment</title>
+            <p>You will create an environment called <codeph>nlp-course</codeph>. It will contain spaCy and all supporting packages. When you are done with the course, you can delete this environment without affecting any other software on your machine.</p>
+        </example>
+    </conbody>
+</concept>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="r_common_setup_errors">
+    <title>Common Setup Errors</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Troubleshooting</category>
+        </metadata>
+    </prolog>
+    <refbody>
+        <section>
+            <title>Quick Fixes</title>
+            <p>If you hit an error in the terminal, check this table before asking Copilot.</p>
+            <table frame="all">
+                <tgroup cols="3">
+                    <colspec colname="c1" colwidth="1*"/>
+                    <colspec colname="c2" colwidth="1*"/>
+                    <colspec colname="c3" colwidth="2*"/>
+                    <thead>
+                        <row>
+                            <entry>The Symptom</entry>
+                            <entry>The Cause</entry>
+                            <entry>The Fix</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Terminal says <code>conda: command not found</code></entry>
+                            <entry>Miniconda is not in your PATH, or you restarted VS Code.</entry>
+                            <entry>On Windows, close the normal terminal and open the <b>Anaconda Prompt</b> from the Start Menu, or ensure you checked <uicontrol>Add to PATH</uicontrol> during installation.</entry>
+                        </row>
+                        <row>
+                            <entry>Terminal says <code>ModuleNotFoundError: No module named 'spacy'</code></entry>
+                            <entry>The virtual environment is not activated.</entry>
+                            <entry>Run <code>conda activate nlp-course</code>. You should see <systemoutput>(nlp-course)</systemoutput> at the start of your terminal line.</entry>
+                        </row>
+                        <row>
+                            <entry>A white dot appears next to your file name at the top of VS Code.</entry>
+                            <entry>Unsaved changes.</entry>
+                            <entry>Press <uicontrol>Ctrl + S</uicontrol> (Windows) or <uicontrol>Cmd + S</uicontrol> (Mac). Python cannot run code you have not saved.</entry>
+                        </row>
+                        <row>
+                            <entry>Terminal says <code>git: command not found</code></entry>
+                            <entry>Git is not installed on your computer.</entry>
+                            <entry>Download and install Git from <xref href="https://git-scm.com" format="html" scope="external">git-scm.com</xref>, then restart VS Code.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

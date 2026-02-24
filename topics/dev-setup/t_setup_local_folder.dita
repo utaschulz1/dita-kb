@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_setup_local_folder">
+    <title>Set Up a Local Project Folder</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>File Management</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Before cloning the course repository, you need a dedicated folder on your computer to store all course files. Keeping everything in one place avoids confusion later.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open your file manager (Windows Explorer or macOS Finder).</cmd>
+            </step>
+            <step>
+                <cmd>Navigate to your <filepath>Documents</filepath> folder (or any location you prefer).</cmd>
+            </step>
+            <step>
+                <cmd>Create a new folder and name it <userinput>my-learnings</userinput>.</cmd>
+                <info>
+                    <note type="tip">Avoid spaces in folder names. Hyphens and underscores are safe alternatives.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>In VS Code, go to <menucascade><uicontrol>File</uicontrol><uicontrol>Open Folder</uicontrol></menucascade> and select the <filepath>my-learnings</filepath> folder.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>VS Code now shows the <filepath>my-learnings</filepath> folder in its Explorer panel. This is your working directory for the course.</p>
+        </result>
+    </taskbody>
+</task>

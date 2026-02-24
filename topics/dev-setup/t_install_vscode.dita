@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_install_vscode">
+    <title>Install VS Code</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Installation</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>You need a Windows or macOS computer with internet access and administrator rights to install software.</p>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>Open your browser and go to <xref href="https://code.visualstudio.com" format="html" scope="external">code.visualstudio.com</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Click the large <uicontrol>Download</uicontrol> button. The site detects your operating system automatically.</cmd>
+            </step>
+            <step>
+                <cmd>Run the downloaded installer and follow the on-screen steps, accepting all default options.</cmd>
+                <info>
+                    <note type="tip">On Windows, check the option <uicontrol>Add to PATH</uicontrol> if it appears during installation.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Launch VS Code from your desktop or Start Menu to confirm the installation succeeded.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>VS Code opens to a Welcome tab. Your workspace is ready.</p>
+        </result>
+    </taskbody>
+</task>

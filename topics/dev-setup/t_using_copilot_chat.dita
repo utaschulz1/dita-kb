@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_using_copilot_chat">
+    <title>Use Copilot Chat to Understand Your Code</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>GitHub Copilot</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>GitHub Copilot must be installed and activated in VS Code.</p>
+        </prereq>
+        <context>
+            <p>Copilot Chat is a conversational interface inside VS Code. You type questions in plain language and Copilot replies with explanations or code suggestions tailored to the files you have open.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open the Copilot Chat panel by clicking the chat icon in the VS Code Activity Bar, or press <uicontrol>Ctrl + Alt + I</uicontrol> (Windows) / <uicontrol>Cmd + Alt + I</uicontrol> (Mac).</cmd>
+            </step>
+            <step>
+                <cmd>Open the script file you want help with in the editor so Copilot has context.</cmd>
+            </step>
+            <step>
+                <cmd>Type your question in the chat input box. For example:</cmd>
+                <stepxmp>
+                    <userinput>What does this script do, step by step?</userinput>
+                </stepxmp>
+            </step>
+            <step>
+                <cmd>Read Copilot's response. If you need clarification, type a follow-up question.</cmd>
+            </step>
+            <step>
+                <cmd>If Copilot suggests a code fix, click <uicontrol>Apply in Editor</uicontrol> to insert it, then save the file and run the script to test the fix.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>You can now use Copilot Chat as an on-demand tutor for any code or error you encounter during the course.</p>
+        </result>
+    </taskbody>
+</task>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_activate_copilot_free">
+    <title>Activate GitHub Copilot Free</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>GitHub Copilot</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>You need a GitHub account. If you do not have one, create a free account at <xref href="https://github.com" format="html" scope="external">github.com</xref> before continuing.</p>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>In VS Code, open the Extensions panel and search for <userinput>GitHub Copilot</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Install the <b>GitHub Copilot</b> extension published by GitHub.</cmd>
+            </step>
+            <step>
+                <cmd>When prompted, click <uicontrol>Sign in to GitHub</uicontrol> and authorise VS Code in your browser.</cmd>
+            </step>
+            <step>
+                <cmd>Return to VS Code. A Copilot icon appears in the bottom status bar, confirming activation.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>GitHub Copilot is active. You now have access to the free tier, which includes Copilot Chat and inline code suggestions.</p>
+        </result>
+    </taskbody>
+</task>

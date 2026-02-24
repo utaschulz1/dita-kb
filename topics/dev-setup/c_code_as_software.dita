@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_code_as_software">
+    <title>Seeing Code as a Tool</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Mental Model</category>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Code is not magic. It is a set of precise instructions written in a language a computer can execute. As a translator or linguist, you already work with language rules — Python is simply another rule-based system.</p>
+        <section id="analogy">
+            <title>A Useful Analogy</title>
+            <p>Think of a Python script the same way you think of a macro in Word or Excel: a saved sequence of actions that automates repetitive work. You do not need to write the macro yourself — you only need to run it.</p>
+        </section>
+        <example id="code-example">
+            <title>Example: What a Script Actually Does</title>
+            <p>A term-extraction script does the following three things in order:</p>
+            <ol>
+                <li>Opens your text file</li>
+                <li>Reads every sentence and identifies noun phrases</li>
+                <li>Writes the results to a new file</li>
+            </ol>
+            <p>Each line of code is one instruction in that sequence.</p>
+        </example>
+    </conbody>
+</concept>

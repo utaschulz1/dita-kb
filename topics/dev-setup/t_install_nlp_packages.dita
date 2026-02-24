@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_install_nlp_packages">
+    <title>Install NLP Packages</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Installation</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>The <codeph>nlp-course</codeph> virtual environment must be active (you should see <systemoutput>(nlp-course)</systemoutput> in the terminal prompt).</p>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>Install spaCy using pip:</cmd>
+                <stepxmp>
+                    <codeblock>pip install spacy</codeblock>
+                </stepxmp>
+            </step>
+            <step>
+                <cmd>Download the English language model for spaCy:</cmd>
+                <stepxmp>
+                    <codeblock>python -m spacy download en_core_web_sm</codeblock>
+                </stepxmp>
+                <info>
+                    <note type="note">This downloads a pre-trained model that spaCy uses to understand English grammar. It is approximately 12 MB.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Verify the installation by running a quick test:</cmd>
+                <stepxmp>
+                    <codeblock>python -c "import spacy; print(spacy.__version__)"</codeblock>
+                </stepxmp>
+                <stepresult>The terminal prints the spaCy version number, for example <systemoutput>3.7.2</systemoutput>.</stepresult>
+            </step>
+        </steps>
+        <result>
+            <p>spaCy and its English language model are installed. Your environment is ready to run the course scripts.</p>
+        </result>
+    </taskbody>
+</task>

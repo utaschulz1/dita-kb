@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_clone_repo">
+    <title>Clone the Course Repository</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Git</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Your local <filepath>my-learnings</filepath> folder must be open in VS Code.</p>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>In VS Code, open the terminal via <menucascade><uicontrol>Terminal</uicontrol><uicontrol>New Terminal</uicontrol></menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Confirm that the terminal prompt shows your <filepath>my-learnings</filepath> folder path.</cmd>
+            </step>
+            <step>
+                <cmd>Type the following command and press <uicontrol>Enter</uicontrol>:</cmd>
+                <stepxmp>
+                    <codeblock>git clone https://github.com/yourusername/nlp-practice-files.git</codeblock>
+                </stepxmp>
+                <info>
+                    <note type="note">Think of <userinput>git clone</userinput> as an automated download button. It copies the entire course folder from the internet into your local <filepath>my-learnings</filepath> folder.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Wait for the download to complete. A new subfolder will appear in the VS Code Explorer panel.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>The practice files are now available on your computer inside <filepath>my-learnings</filepath>.</p>
+        </result>
+    </taskbody>
+</task>

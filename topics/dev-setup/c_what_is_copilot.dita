@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_what_is_copilot">
+    <title>What Is GitHub Copilot?</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>GitHub Copilot</category>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>GitHub Copilot is an AI assistant built into VS Code. It can answer questions about code, explain error messages in plain language, suggest fixes, and even write new code based on a description you type.</p>
+        <section id="copilot-for-non-devs">
+            <title>Why Copilot Is Valuable for Non-Developers</title>
+            <p>As a translator or linguist running scripts for the first time, you will encounter unfamiliar errors and syntax. Copilot acts as a patient, on-demand tutor. Instead of searching the web, you can ask Copilot directly inside VS Code and get contextual answers about your specific file.</p>
+        </section>
+        <section id="copilot-limitations">
+            <title>Important Limitations</title>
+            <p>Copilot can make mistakes. Always verify suggested fixes by running the code and checking the output. Treat Copilot as a first-draft helper, not an infallible authority.</p>
+        </section>
+    </conbody>
+</concept>

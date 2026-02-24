@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_create_activate_env">
+    <title>Create and Activate a Virtual Environment</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Package Management</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Miniconda must be installed and the VS Code terminal must recognise the <codeph>conda</codeph> command.</p>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>Open the terminal in VS Code.</cmd>
+            </step>
+            <step>
+                <cmd>Create a new environment named <codeph>nlp-course</codeph> with Python 3.10:</cmd>
+                <stepxmp>
+                    <codeblock>conda create -n nlp-course python=3.10</codeblock>
+                </stepxmp>
+                <info>
+                    <note type="note">This command downloads and sets up a fresh, isolated Python installation. It may take a minute.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>When prompted, type <userinput>y</userinput> and press <uicontrol>Enter</uicontrol> to confirm.</cmd>
+            </step>
+            <step>
+                <cmd>Activate the environment:</cmd>
+                <stepxmp>
+                    <codeblock>conda activate nlp-course</codeblock>
+                </stepxmp>
+                <stepresult>The terminal prompt now shows <systemoutput>(nlp-course)</systemoutput> at the beginning, confirming the environment is active.</stepresult>
+            </step>
+        </steps>
+        <result>
+            <p>The <codeph>nlp-course</codeph> virtual environment is active. Any packages you install now will be contained within this environment.</p>
+        </result>
+    </taskbody>
+</task>

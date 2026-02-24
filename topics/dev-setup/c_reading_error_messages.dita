@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_reading_error_messages">
+    <title>Reading Error Messages</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Troubleshooting</category>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Red text in the terminal is not a catastrophe. Error messages are informational — they tell you exactly what went wrong and where. Learning to read them is the most valuable debugging skill you can develop.</p>
+        <section id="anatomy-of-error">
+            <title>Anatomy of a Python Error Message</title>
+            <p>A Python error message has three key parts:</p>
+            <dl>
+                <dlentry>
+                    <dt>Traceback</dt>
+                    <dd>The sequence of file and line references leading to the error. Read it from bottom to top — the bottom line is where the error actually occurred.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Error type</dt>
+                    <dd>The category of error, for example <codeph>ModuleNotFoundError</codeph> or <codeph>SyntaxError</codeph>. The type alone often tells you what went wrong.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Error message</dt>
+                    <dd>A human-readable description of the specific problem, for example <systemoutput>No module named 'spacy'</systemoutput>.</dd>
+                </dlentry>
+            </dl>
+        </section>
+        <example id="error-example">
+            <title>Example: ModuleNotFoundError</title>
+            <codeblock>ModuleNotFoundError: No module named 'spacy'</codeblock>
+            <p>This error means Python cannot find the spaCy library. The most common cause is that your virtual environment is not activated. Run <codeph>conda activate nlp-course</codeph> and try again.</p>
+        </example>
+    </conbody>
+</concept>

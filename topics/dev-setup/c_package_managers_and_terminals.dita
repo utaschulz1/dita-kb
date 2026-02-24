@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_package_managers_and_terminals">
+    <title>Package Managers and Terminals</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Package Management</category>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>A <b>package manager</b> is a program that installs, updates, and removes software libraries for you automatically. Instead of downloading files manually, you type a short command and the package manager handles everything.</p>
+        <section id="conda-explained">
+            <title>Conda: Your Package Manager for This Course</title>
+            <p>This course uses <b>Conda</b>, which comes bundled with Miniconda. Conda is popular in the data science and NLP communities because it manages both Python packages and the Python version itself.</p>
+        </section>
+        <section id="terminal-role">
+            <title>Why You Need the Terminal</title>
+            <p>Package managers are controlled by typing commands in the terminal — there is no graphical interface. This is the main reason you need to become comfortable with the terminal. The commands are short and you will only need a handful of them.</p>
+        </section>
+        <example id="install-example">
+            <title>Example: Installing a Package with Conda</title>
+            <codeblock>conda install spacy</codeblock>
+            <p>This single command downloads and installs the spaCy NLP library and all its dependencies.</p>
+        </example>
+    </conbody>
+</concept>

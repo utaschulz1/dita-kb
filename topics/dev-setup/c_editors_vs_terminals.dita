@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_editors_vs_terminals">
+    <title>Code Editors vs. Terminals</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Workspace</category>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>VS Code is your workspace. It combines two separate tools that you will use throughout this course: a <b>code editor</b> and a <b>terminal</b>.</p>
+        <section id="the-editor">
+            <title>The Code Editor</title>
+            <p>The editor is the large central panel where you read and edit script files. It works like a text editor (Word, Notepad) but adds colour-coding and error highlighting specific to programming languages.</p>
+        </section>
+        <section id="the-terminal">
+            <title>The Terminal</title>
+            <p>The terminal (also called the command line or shell) is the panel at the bottom of VS Code. You type commands here to install packages, activate environments, and run scripts. It is a text-based way of operating your computer.</p>
+        </section>
+        <example id="editor-terminal-example">
+            <title>How They Work Together</title>
+            <p>You open a script in the editor to read it, then switch to the terminal and type <codeph>python my_script.py</codeph> to run it.</p>
+        </example>
+    </conbody>
+</concept>

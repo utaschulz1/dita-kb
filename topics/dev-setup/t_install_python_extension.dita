@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_install_python_extension">
+    <title>Install the Python Extension for VS Code</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Installation</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>VS Code must be installed before completing this task.</p>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>Open VS Code.</cmd>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Extensions</uicontrol> icon in the left Activity Bar (it looks like four squares).</cmd>
+            </step>
+            <step>
+                <cmd>In the search bar, type <userinput>Python</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Click the extension published by <b>Microsoft</b> (it is usually the first result) and then click <uicontrol>Install</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>The Python extension is installed. VS Code can now recognise Python files and provide syntax highlighting and run buttons.</p>
+        </result>
+    </taskbody>
+</task>

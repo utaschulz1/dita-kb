@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_install_miniconda">
+    <title>Install Miniconda</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Dev Setup</category>
+            <category>Installation</category>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Miniconda is a minimal installer for Conda. It provides Python and the Conda package manager without the hundreds of extra packages that come with the full Anaconda distribution.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <xref href="https://docs.conda.io/en/latest/miniconda.html" format="html" scope="external">the Miniconda download page</xref> and download the installer for your operating system (Windows or macOS).</cmd>
+            </step>
+            <step>
+                <cmd>Run the installer.</cmd>
+                <info>
+                    <note type="important">On Windows, select <uicontrol>Add Miniconda3 to my PATH environment variable</uicontrol> when this option appears. This allows you to use <codeph>conda</codeph> commands in the VS Code terminal.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Accept all other default options and complete the installation.</cmd>
+            </step>
+            <step>
+                <cmd>Close and reopen VS Code to apply the PATH changes.</cmd>
+            </step>
+            <step>
+                <cmd>In the VS Code terminal, verify the installation by typing:</cmd>
+                <stepxmp>
+                    <codeblock>conda --version</codeblock>
+                </stepxmp>
+                <stepresult>The terminal prints the installed Conda version number, for example <systemoutput>conda 23.5.0</systemoutput>.</stepresult>
+            </step>
+        </steps>
+        <result>
+            <p>Miniconda and Conda are installed. You can now create virtual environments and install packages.</p>
+        </result>
+    </taskbody>
+</task>
