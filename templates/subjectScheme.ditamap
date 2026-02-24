@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE subjectScheme PUBLIC "-//OASIS//DTD DITA Subject Scheme Map//EN" "subjectScheme.dtd">
+<map id="subject-scheme-template">
+<!-- Save as rules.ditamap and link the rulebook in course ditamap like this: 
+    <mapref href="../shared-resources/rules.ditamap" type="subjectScheme"/> -->
+
+<subjectScheme>
+    <title>Master Rulebook for Mini-Course Attributes</title>
+
+    <!-- 1. DEFINE YOUR VALUES (Taxonomies) -->
+    
+    <!-- Define allowed Operating Systems -->
+    <subjectdef keys="os-values">
+        <subjectdef keys="windows" navtitle="Windows OS"/>
+        <subjectdef keys="mac" navtitle="Mac OS"/>
+        <subjectdef keys="linux" navtitle="Linux OS"/>
+    </subjectdef>
+
+    <subjectdef keys="linux">
+        <subjectdef keys="ubuntu"/>
+        <subjectdef keys="redhat"/>
+    </subjectdef>
+
+    <!-- Define allowed Delivery Targets (for your upsells!) -->
+    <subjectdef keys="delivery-targets">
+        <subjectdef keys="free-course" navtitle="Free HTML Mini-Course"/>
+        <subjectdef keys="paid-course" navtitle="Paid Video Course"/>
+        <subjectdef keys="documentation" navtitle="Standard Manual"/>
+    </subjectdef>
+
+    <!-- Define your Audiences -->
+    <subjectdef keys="audience-types">
+        <subjectdef keys="translator"/>
+        <subjectdef keys="developer"/>
+    </subjectdef>
+
+
+    <!-- 2. BIND THE VALUES TO SPECIFIC ATTRIBUTES -->
+    
+    <!-- Force the @platform attribute to only use 'os-values' -->
+    <enumerationdef>
+        <attributedef name="platform"/>
+        <subjectdef keyref="os-values"/>
+    </enumerationdef>
+
+    <!-- Force the @deliveryTarget attribute to only use 'delivery-targets' -->
+    <enumerationdef>
+        <attributedef name="deliveryTarget"/>
+        <subjectdef keyref="delivery-targets"/>
+    </enumerationdef>
+
+    <!-- Force the @audience attribute to only use 'audience-types' -->
+    <enumerationdef>
+        <attributedef name="audience"/>
+        <subjectdef keyref="audience-types"/>
+    </enumerationdef>
+
+</subjectScheme>
+</map>

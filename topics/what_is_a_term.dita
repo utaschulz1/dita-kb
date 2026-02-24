@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="what_is_a_term">
+    
+    <title>What is a Term?</title>
+    
+    <!-- Topic-level metadata for searching and filtering -->
+    <prolog>
+        <author type="creator">Your Name</author>
+        <critdates>
+            <created date="2026-02-23"/>
+        </critdates>
+        <metadata>
+            <category>Terminology</category>
+            <category>Theory</category>
+        </metadata>
+    </prolog>
+
+    <conbody>
+        <!-- A short description or summary of the concept -->
+        <p>Before you can extract terminology from a text, you must first define what qualifies as a "term" within your specific domain. A term is not simply any word; it is a linguistic representation of a specialized concept.</p>
+        
+        <section id="characteristics">
+            <title>Core Characteristics of a Term</title>
+            <p>For the purposes of technical translation and extraction, a viable term usually possesses the following traits:</p>
+            <ul>
+                <li><b>Domain-specific:</b> It has a precise meaning in a specific field (e.g., engineering, software) that may differ from its general use.</li>
+                <li><b>Monoreferential:</b> In its specific context, it refers to exactly one concept.</li>
+                <li><b>Multi-word or Single-word:</b> It can be a single noun or a complex noun phrase (n-gram).</li>
+            </ul>
+        </section>
+
+        <!-- The required Example element from your Content Model rules -->
+        <example id="term-example">
+            <title>Example: General Vocabulary vs. Term</title>
+            <p>Consider the word <i>"String"</i>.</p>
+            <ul>
+                <li><b>General vocabulary (Textile domain):</b> A piece of long, thin material used for tying.</li>
+                <li><b>Term (Software domain):</b> A sequence of characters treated as a single data type.</li>
+            </ul>
+            <p>When extracting terms for software localization, "String" must be captured as a specialized term.</p>
+        </example>
+
+        <!-- Conditional text: The Upsell link that only shows in the free HTML version -->
+        <note type="tip" deliveryTarget="free-course">
+            Want to dive deeper into the linguistic theory behind terminology? 
+            <xref href="https://yourwebsite.com/video-course" format="html" scope="external">
+                Check out the full Video Masterclass!
+            </xref>
+        </note>
+    </conbody>
+    
+    <!-- References to standard definitions or external readings -->
+    <related-links>
+        <link href="https://www.iso.org/obp/ui/#iso:std:iso:1087:ed-2:v1:en" format="html" scope="external">
+            <linktext>ISO 1087:2019 - Terminology work and terminology science</linktext>
+        </link>
+    </related-links>
+
+</concept>

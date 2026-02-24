@@ -1,0 +1,9 @@
+<step>
+    <cmd>In the VS Code terminal window, type the following command and press <uicontrol>Enter</uicontrol>:</cmd>
+    <stepxmp>
+        <codeblock>git clone https://github.com/yourusername/nlp-practice-files.git</codeblock>
+    </stepxmp>
+    <info>
+        <note type="note">Think of <userinput>git clone</userinput> as an automated "Download ZIP" button. It safely copies the course folder from the internet directly into your local <filepath>my-learnings</filepath> folder.</note>
+    </info>
+</step>

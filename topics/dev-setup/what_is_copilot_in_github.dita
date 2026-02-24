@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="what_is_copilot">
+    <title>GitHub Copilot: Machine Translation for Code</title>
+    
+    <conbody>
+        <p>As a translator, you are likely used to CAT tools offering <b>AutoSuggest</b> or populating a segment with <b>Machine Translation (MT)</b>. GitHub Copilot does exactly the same thing, but for programming languages.</p>
+        
+        <p>It is an AI assistant built directly into VS Code. It is not activated automatically; you must install it and sign in with your GitHub account to use the Free tier.</p>
+
+        <section id="how-it-helps">
+            <title>How it works in your editor</title>
+            <p>Copilot helps you in two distinct ways:</p>
+            <ul>
+                <li><b>Ghost Text (AutoSuggest):</b> As you type Python code, Copilot will suggest the rest of the line in faint gray text. If you like the suggestion, you press <uicontrol>Tab</uicontrol> to accept it.</li>
+                <li><b>Copilot Chat (Your Dev Support):</b> You can open a chat sidebar in VS Code and ask questions in plain English, such as <i>"How do I run this specific Python file?"</i></li>
+            </ul>
+        </section>
+
+        <section id="the-context-rule">
+            <title>The Golden Rule: Context is Everything</title>
+            <p>Just like an MT engine produces better translations if it has context, Copilot gives better answers if it knows what folder you are working in.</p>
+            <p>Because you opened your <filepath>my-learnings</filepath> folder in VS Code, you can use the special command <b>@workspace</b> in the chat. This tells the AI: <i>"Look at all the files in this specific folder before answering my question."</i></p>
+        </section>
+        
+        <example>
+            <title>Example Chat Prompt</title>
+            <p>Instead of asking: <i>"Why is my code broken?"</i></p>
+            <p>Ask: <i>"<b>@workspace</b> I am trying to run the term extraction script, but I am getting a 'pandas not found' error. How do I fix this?"</i></p>
+        </example>
+    </conbody>
+</concept>

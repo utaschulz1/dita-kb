@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="basic-dev-skills-for-non-devs">
+    
+    <title>Prerequisite: Most Basic Dev Skills for Translators in 20 Min</title>
+    
+    <topicmeta>
+        <author>Uta Schulz</author>
+        <shortdesc>A 20-minute rapid setup guide for a Python development environment to enable non-developers to run scripts on their files and output results.</shortdesc>
+    </topicmeta>
+
+    <!-- LESSON 0: Introduction -->
+    <topicgroup>
+        <topicmeta><navtitle>0. Introduction</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/c_course_overview.dita" type="concept"/>
+    </topicgroup>
+
+    <!-- LESSON 1: Mental Model -->
+    <topicgroup>
+        <topicmeta><navtitle>1. Changing How You See Code</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/c_code_as_software.dita" type="concept"/>
+    </topicgroup>
+
+    <!-- LESSON 2: The Workspace -->
+    <topicgroup>
+        <topicmeta><navtitle>2. Setting Up Your Workspace (VS Code)</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/c_editors_vs_terminals.dita" type="concept"/>
+        <topicref href="topics/dev-setup/t_install_vscode.dita" type="task"/>
+        <topicref href="topics/dev-setup/t_install_python_extension.dita" type="task"/>
+    </topicgroup>
+
+    <!-- LESSON 3: Getting Files -->
+    <topicgroup>
+        <topicmeta><navtitle>3. Getting the Practice Files</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/t_setup_local_folder.dita" type="task"/>
+        <topicref href="topics/dev-setup/t_clone_repo.dita" type="task"/>
+    </topicgroup>
+
+    <!-- LESSON 4: Environments (The Scary Stuff Demystified) -->
+    <topicgroup>
+        <topicmeta><navtitle>4. Package Managers &amp; Environments</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/c_package_managers_and_terminals.dita" type="concept"/>
+        <topicref href="topics/dev-setup/c_why_virtual_environments.dita" type="concept"/>
+    </topicgroup>
+
+    <!-- LESSON 5: Installation Tasks -->
+    <topicgroup>
+        <topicmeta><navtitle>5. Installing Python &amp; NLP Tools</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/t_install_miniconda.dita" type="task"/>
+        <topicref href="topics/dev-setup/t_create_activate_env.dita" type="task"/>
+        <topicref href="topics/dev-setup/t_install_nlp_packages.dita" type="task"/>
+    </topicgroup>
+    <!-- LESSON 6: Troubleshooting -->
+    <topicgroup>
+        <topicmeta><navtitle>6. Troubleshooting: When Things Turn Red</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/c_reading_error_messages.dita" type="concept"/>
+        <topicref href="topics/dev-setup/r_common_setup_errors.dita" type="reference"/>
+    </topicgroup>
+
+    <!-- LESSON 7: GitHub Copilot -->
+    <topicgroup>
+        <topicmeta><navtitle>7. Activating GitHub Copilot</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/c_what_is_copilot.dita" type="concept"/>
+        <topicref href="topics/dev-setup/t_activate_copilot_free.dita" type="task"/>
+        <topicref href="topics/dev-setup/t_using_copilot_chat.dita" type="task"/>
+    </topicgroup>
+</map>

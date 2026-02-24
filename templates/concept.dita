@@ -1,0 +1,22 @@
+<concept id="what-is-a-term">
+    <title>What is a Term?</title>
+    <!-- Prolog goes here -->
+    <conbody>
+        <p>A clear definition of a term for extraction purposes...</p>
+        <section id="guiding-questions">
+            <title>Questions to Define a Term</title>
+            <ul>
+                <li>Is it domain-specific?</li>
+                <li>Is it a single word or a multi-word expression?</li>
+            </ul>
+        </section>
+        <example>
+            <title>Example of a Term vs. General Vocabulary</title>
+            <p>In software localization, "String" is a term, whereas "Word" is general vocabulary.</p>
+        </example>
+    </conbody>
+    <related-links>
+        <!-- Standardized way to include references -->
+        <link href="references/cabre_terminology_theory.dita" format="dita"/>
+    </related-links>
+</concept>

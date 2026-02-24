@@ -1,0 +1,7 @@
+<!-- This note only appears in the free HTML mini-course -->
+    <note type="tip" deliveryTarget="free-course">
+        Want to see this in action? 
+        <xref href="https://yourplatform.com/video-course" format="html" scope="external">
+            Join the full Video Masterclass on Terminology Extraction!
+        </xref>
+    </note>

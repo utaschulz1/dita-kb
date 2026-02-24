@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE learningMap PUBLIC "-//OASIS//DTD DITA Learning Map//EN" "learningMap.dtd">
+<map id="course-term-extraction">
+    
+    <title>Terminology Extraction for Technical Communication</title>
+    
+    <!-- Course-level metadata -->
+    <topicmeta>
+        <author type="creator">Uta Schulz</author>
+        <audience type="public" role="technical-communication" experiencelevel="intermediate"/>
+    </topicmeta>
+
+    <!-- MODULE 1: Preparation -->
+    <learningGroup id="mod-preparation">
+        <topicmeta>
+            <navtitle>Preparation &amp; Definitions</navtitle>
+        </topicmeta>
+        <learningObject>
+            <!-- Here we pull in your actual concept file -->
+            <learningContentRef href="../topics/term-extraction/c_what_is_a_term.dita" format="dita"/>
+            <!-- Future file: <learningContentRef href="../topics/term-extraction/c_definition_questions.dita"/> -->
+        </learningObject>
+    </learningGroup>
+
+    <!-- MODULE 2: Extraction Patterns -->
+    <learningGroup id="mod-patterns">
+        <topicmeta>
+            <navtitle>Patterns to Extract</navtitle>
+        </topicmeta>
+        <learningObject>
+            <!-- Future files -->
+            <!-- <learningContentRef href="../topics/nlp-basics/c_understanding_ngrams.dita"/> -->
+            <!-- <learningContentRef href="../topics/nlp-basics/c_morphological_patterns.dita"/> -->
+        </learningObject>
+    </learningGroup>
+
+    <!-- MODULE 3: Categories of Extraction -->
+    <learningGroup id="mod-extraction-methods">
+        <topicmeta>
+            <navtitle>Extraction Methods &amp; Tools</navtitle>
+        </topicmeta>
+        
+        <!-- Sub-module 3.1 -->
+        <learningObject id="manual-extraction">
+            <topicmeta><navtitle>Manual Extraction</navtitle></topicmeta>
+            <!-- <learningContentRef href="../topics/term-extraction/t_read_and_highlight.dita"/> -->
+            <!-- <learningContentRef href="../topics/term-extraction/t_analyze_antconc.dita"/> -->
+        </learningObject>
+        
+        <!-- Sub-module 3.2 -->
+        <learningObject id="ready-made-tools">
+            <topicmeta><navtitle>Ready-Made Tools</navtitle></topicmeta>
+            <!-- <learningContentRef href="../topics/term-extraction/c_multiterm_extract.dita"/> -->
+        </learningObject>
+        
+        <!-- Sub-module 3.3 -->
+        <learningObject id="nlp-llm-tools">
+            <topicmeta><navtitle>NLP &amp; LLM-Based Extraction</navtitle></topicmeta>
+            <!-- <learningContentRef href="../topics/nlp-basics/c_keywords_vs_chunks.dita"/> -->
+            <!-- <learningContentRef href="../topics/term-extraction/t_llm_prompting.dita"/> -->
+        </learningObject>
+    </learningGroup>
+
+</map>

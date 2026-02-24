@@ -441,7 +441,7 @@ Analysis of the Requirements & DITA Mapping
 
     The Environment (Concept + Tasks): Terminals are scary. Virtual environments are confusing. We need a Concept topic using a "Sandboxes" or "Separate computer profiles" analogy, followed by the specific Miniconda setup.
 
-The DITA Content Model Outline
+### The DITA Content Model Outline
 
 Here is the structured outline for "Most Basic Dev Skills for Translators in 20 Min".
 
@@ -684,3 +684,87 @@ For r_common_setup_errors.dita, DITA's <properties> table or a simple <table> is
 </reference>
 
 By adding these files, your learners get a complete, closed-loop onboarding experience. If they get stuck, Lesson 6 catches them. If they want to push further, Lesson 7 gives them the AI training wheels to do so.
+
+# Mix with specializations
+1. How to mix L&T Overviews with Standard Concepts/Tasks
+
+You want a lesson to start with an Introduction/Objective and end with a Summary, but you want the core content in the middle to be standard, reusable Concept and Task topics.
+
+You don't mix the tags inside a single file; instead, you mix the files inside your DITA Map using a <learningObject>. A learningObject acts as a "lesson container."
+
+<learningObject id="lesson_dev_setup">
+    
+    <!-- 1. The Introduction & Objectives (L&T Topic) -->
+    <learningOverviewRef href="topics/l_overview_dev_setup.dita"/>
+    
+    <!-- 2. The Core Content (Standard Topics) -->
+    <learningContentRef href="topics/c_code_as_software.dita"/>
+    <learningContentRef href="topics/t_install_vscode.dita"/>
+    
+    <!-- 3. The Result / Wrap-up (L&T Topic) -->
+    <learningSummaryRef href="topics/l_summary_dev_setup.dita"/>
+
+</learningObject>
+
+When you publish this to HTML or a PDF, the publishing engine stitches these four separate files together into one cohesive, flowing lesson. Your Introduction flows right into the Concept, which flows into the Task, and ends with the Summary.
+2. Single-Sourcing: The tutorialinfo and deliveryTarget Magic
+
+The second example you found (the camera tutorial) is the absolute gold standard for what you are trying to do.
+
+Notice that the camera topic is a standard <task>, not an L&T topic. Yet, it contains course-specific information.
+
+You can use a standard <task> for your "Install VS Code" instructions, and make it work for both a Product Manual and your Mini-Course by using conditional profiling (deliveryTarget).
+
+How you would use this for your Translator Dev Setup:
+
+<task id="install-vscode">
+  <title>Installing Visual Studio Code</title>
+  
+  <!-- The shortdesc acts as your objective for the specific topic -->
+  <shortdesc>Install the VS Code editor to write and execute Python scripts on your local machine.</shortdesc>
+  
+  <taskbody>
+    <!-- This context only shows up in the course -->
+    <context deliveryTarget="minicourse">
+        <p>As we discussed in the previous video, think of VS Code as your new "CAT Tool for Code." Let's get it installed.</p>
+    </context>
+
+    <!-- This context shows up in standard documentation -->
+    <context deliveryTarget="documentation">
+        <p>Download the latest stable release of VS Code for your operating system.</p>
+    </context>
+
+    <steps>
+      <step>
+        <cmd>Navigate to code.visualstudio.com and download the installer.</cmd>
+      </step>
+      <step>
+        <cmd>Run the installer and leave the default settings checked.</cmd>
+        
+        <!-- Standard DITA task tag specifically meant for learning! -->
+        <tutorialinfo deliveryTarget="minicourse">
+            <b>Instructor Tip:</b> Make sure you specifically check the box that says "Add to PATH" if you are on Windows. This will save us a lot of headaches later!
+        </tutorialinfo>
+      </step>
+    </steps>
+    
+    <!-- Use the result tag for the topic-level summary -->
+    <result>
+        <p>You now have a working code editor installed on your system.</p>
+    </result>
+  </taskbody>
+</task>
+
+Summary of the Best Practice for Your Workflow:
+
+    For pure Course Metadata (Durations, Specific Objectives): Create a <learningOverview> file and a <learningSummary> file. Put them at the beginning and end of your <learningObject> in the Map.
+
+    For the Core Content: Keep writing standard <concept> and <task> files.
+
+    For Topic-Level Objectives: Use the <shortdesc> element at the top of your concepts and tasks. It is best practice to write short descriptions that tell the user why they are reading this topic.
+
+    For Topic-Level Summaries: Use the <result> element at the bottom of your <task> topics, and a standard <section title="Summary"> at the bottom of <concept> topics.
+
+    For Course-Specific chatter inside standard topics: Use <context deliveryTarget="course"> and <tutorialinfo deliveryTarget="course">.
+
+By doing this, your core knowledgebase remains completely pure and reusable. If you ever want to publish a raw "Technical Setup Manual" without the friendly instructor tone, you just tell your DITA compiler to exclude anything tagged deliveryTarget="minicourse", and you get a perfectly clean, professional software manual!

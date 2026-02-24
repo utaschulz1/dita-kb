@@ -1,0 +1,14 @@
+<prolog>
+    <author type="creator">Your Name</author>
+    <critdates>
+        <created date="2026-02-23"/>
+        <revised modified="2026-03-10"/>
+    </critdates>
+    <metadata>
+        <!-- Defines who this is for -->
+        <audience type="user" job="translating" experiencelevel="intermediate"/>
+        <!-- Useful for grouping/searching in your KB -->
+        <category>Terminology Extraction</category>
+        <category>NLP</category>
+    </metadata>
+</prolog>
