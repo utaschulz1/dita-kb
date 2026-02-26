@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_good_installation_practices">
+    <title>Concept Title</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-24"/>
+        </critdates>
+        <metadata>
+            <category>Setup</category>
+            <category>Python</category>
+            <audience type="public" job="technical communication" experiencelevel="novice"/>
+        </metadata>
+    </prolog>
+    <shortdesc>This section will introduce you to good installation practices for Python and its libraries. You will learn about the difference between system-wide versus user-specific installations of Python and differences between package managers for Python.</shortdesc>
+    <conbody>
+        <p>The words package managers and virtual environments will come up in this section. For now, imagine a package manager as the local tool supplier and virtual environments as specific tool collections.</p>
+        
+        <p>First, let's understand why you need a plan. Then we will explore the options.</p>
+        <section>
+            <title>Good Installation Practices</title>
+            <p>The problem:
+                <ul>
+                    <li>The version of Python matters. You don't necessarily need the latest version, but you the one that works best for all libraries used in the project.</li>
+                    <li>For each programming project, you might need a unique combination of Python version and libraries versions.</li>
+                    <li>Installing Python system-wide can collide with what other users want and cause problems for other software that relies on Python.</li>
+                </ul>
+            </p>
+            <p>The solution:
+                <ul>
+                    <li>Mind other users: Use user-specific installations of Python and libraries.</li>
+                    <li>Efficient storage: Use a package manager to avoid redundant installations.</li>
+                    <li>Prepare for different needs: Use virtual environments to manage different combinations of Python and library versions for your projects.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Difference between system-wide and user-specific installations</title>
+            <p>Pros and cons of system-wide installations:
+                <ul>
+                    <li>Pro: Efficiency. One single installation saves disk space if multiple people use the same computer.</li>
+                    <li>Con: "Dependency Hell." If Project A needs Version 1 of a tool and Project B needs Version 2, a system-wide setup can only hold one, inevitably breaking the other project.</li>
+                    <li>contentCon: System Risk. Many operating systems (like macOS and Linux) rely on an internal Python version to run basic tasks. Changing system-wide files can cause your entire computer to stop working correctly.</li>
+                    <li>Con: Permissions. You often need "Administrator" or "Sudo" rights to make any changes, which is a major hurdle in restricted corporate environments.</li>
+                </ul>
+            </p>
+            <p>Pros and cons of user-specific installations:
+                <ul>
+                    <li>Pro: Safety. You don't need "Administrator" permissions to change things, and you won't accidentally break your computer's core functions.</li>
+                    <li>Pro: Control. You can delete or "reset" your Python setup whenever things get messy without affecting any other user on the machine.</li>
+                    <li>Con: Redundancy. You might end up with multiple versions of the same library, taking up slightly more hard drive space.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Different Package Managers</title>
+            <p>There are different package managers for Python, such as pip, uv and conda. Other programing software has other package managers; javascript has npm. Each has its own pros and cons.
+            </p>
+            <p>Pros and cons of pip, conda and uv:
+                <ul>
+                    <li>pip: The "standard" tool. It is lightweight and comes pre-installed with Python, but it only manages libraries, not the Python version itself.</li>
+                    <li>Conda / Miniconda: The "all-in-one" choice. It is the gold standard for data science because it manages both your libraries AND the specific version of Python you need for each project.</li>
+                    <li>uv: The "speedster." A modern tool that does everything pip does but is significantly faster and better at catching installation errors before they happen.</li>
+                </ul>
+            </p>
+            <p>Why using Miniconda is a good choice for this non-devs in language processing:
+                <ul>
+                    <li>It is beginner-friendly. Install Miniconda and get a complete Python environment with package management and virtual environment support.</li>
+                    <li>Having the ability to install different Python versions is important for natural language processing libraries in Python.</li>
+                    <li>Con: It can be resource-intensive, as it may require more disk space and memory compared to other lightweight options.</li>
+                </ul>
+            </p>
+            </section>
+        <section>
+            <title>Summary</title>
+            <p>How you set up your Python environment depends on how you use your computer and on your level of experience. As a beginner, it's often recommended to use user-specific installations. Starting the installation with Miniconda is beginner-friendly because you get Python and a way to manage packages and virtual environments in one go.</p>
+        </section>
+    </conbody>
+</concept>

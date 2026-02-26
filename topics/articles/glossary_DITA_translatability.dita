@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="glossary_DITA_translatability">
+    <title>Glossary Use and Translatability in DITA</title>
+    <prolog>
+        <author type="creator">Uta Schulz</author>
+        <critdates>
+            <created date="2026-02-26"/>
+        </critdates>
+        <metadata>
+            <category>DITA</category>
+            <category>Localization</category>
+            <category>Glossary</category>
+        </metadata>
+    </prolog>
+    <shortdesc>DITA offers powerful mechanisms for managing terminology and creating dynamic glossaries. However, what is technically feasible in DITA is not always optimal for efficient and high-quality localization. This article explores DITA's glossary features, distinguishing between powerful automation and practical translation considerations.</shortdesc>
+    <body>
+        <section id="glossary-common-elements">
+            <title>Glossary in DITA: The Common Elements</title>
+            <p>In DITA, a glossary is built from individual glossary entry topics, each represented by a <filepath>glossentry.dita</filepath> file. These files are rigid, data-centric containers designed for machine processing. The most critical elements within a glossentry are:</p>
+            <dl>
+                <dlentry>
+                    <dt><xmlelement>glossterm</xmlelement></dt>
+                    <dd>Defines the preferred, full term (e.g., "Application Programming Interface"). This is the anchor of your entry.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt><xmlelement>glossdef</xmlelement></dt>
+                    <dd>Contains the definition of the term. This is crucial for tooltips and dedicated glossary pages.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt><xmlelement>glossAcronym</xmlelement></dt>
+                    <dd>Stores the abbreviation or acronym for the term (e.g., "API").</dd>
+                </dlentry>
+                <dlentry>
+                    <dt><xmlelement>glossSurfaceForm</xmlelement></dt>
+                    <dd>This optional but powerful element explicitly defines how the full term, often combined with its acronym, should appear in introductory contexts (e.g., "Application Programming Interface (API)"). If omitted, DITA-OT defaults to using the <xmlelement>glossterm</xmlelement> as the primary fallback.</dd>
+                </dlentry>
+            </dl>
+            <p>These individual glossentry files are then centrally managed and linked via a DITA Map, typically using a <xmlelement>keydef</xmlelement> to assign a unique key to each term.</p>
+        </section>
+
+        <section id="why-keyref">
+            <title>Why Use keyref, Not conref or href?</title>
+            <p>When referencing glossary terms in your content, the <xmlatt>keyref</xmlatt> attribute is the superior choice over <xmlatt>conref</xmlatt> or <xmlatt>href</xmlatt>.</p>
+            <dl>
+                <dlentry>
+                    <dt><xmlatt>conref</xmlatt></dt>
+                    <dd>Directly embeds a piece of content. If the source file moves or its ID changes, every conref breaks. It lacks the flexibility and indirection needed for robust terminology management.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt><xmlatt>href</xmlatt></dt>
+                    <dd>Creates a simple hyperlink. It does not enable the smart rendering or definition-pulling that <xmlatt>keyref</xmlatt> offers.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt><xmlatt>keyref</xmlatt></dt>
+                    <dd>DITA's elegant solution for indirect addressing. By defining a key (e.g., <codeph>key="api"</codeph> points to <filepath>api_entry.dita</filepath>) in your DITA Map, your content can refer to the key. If the glossentry file's location or content changes, you only update the key definition in the Map, and all references automatically update. This centralization is invaluable for scalability and maintenance, especially in multilingual projects.</dd>
+                </dlentry>
+            </dl>
+        </section>
+
+        <section id="rendering-options">
+            <title>Glossary Rendering Options in DITA</title>
+            <p>DITA provides specific inline elements that leverage <xmlatt>keyref</xmlatt> to control how a glossary term appears in your content:</p>
+            <dl>
+                <dlentry>
+                    <dt><codeph>&lt;term keyref="my-key"&gt;</codeph></dt>
+                    <dd>
+                        <p>When linked via <xmlatt>keyref</xmlatt>, this element renders the preferred term.</p>
+                        <ul>
+                            <li><b>Empty <codeph>&lt;term keyref="my-key"/&gt;</codeph></b>: The DITA processor automatically pulls the text from the <xmlelement>glossterm</xmlelement> element of the referenced glossentry. This is powerful for enforcing consistent terminology.</li>
+                            <li><b><codeph>&lt;term keyref="my-key"&gt;Hard-coded Text&lt;/term&gt;</codeph></b>: The processor displays your hard-coded text while still using the <xmlatt>keyref</xmlatt> to link to the glossary definition (e.g., for hover-tips). This is where translation considerations become vital.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt><codeph>&lt;abbreviated-form keyref="my-key"/&gt;</codeph></dt>
+                    <dd>
+                        <p>This specialized element manages acronyms and their full forms. The DITA-OT default behavior is:</p>
+                        <ul>
+                            <li><b>Introductory contexts</b>: Render the content of <xmlelement>glossSurfaceForm</xmlelement>. If empty, render <xmlelement>glossterm</xmlelement>.</li>
+                            <li><b>Non-introductory contexts</b>: Render the content of <xmlelement>glossAcronym</xmlelement>. If empty, render <xmlelement>glossterm</xmlelement>.</li>
+                        </ul>
+                        <p>This logic makes <xmlelement>abbreviated-form</xmlelement> ideal for automatically expanding acronyms on first use and abbreviating them thereafter, with the glossary definition always available for a hover-tip.</p>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt><codeph>&lt;xref keyref="my-key"/&gt;</codeph></dt>
+                    <dd>A standard cross-reference that, when linked to a glossary <xmlatt>keyref</xmlatt>, behaves like a hyperlink. It typically displays the <xmlelement>glossterm</xmlelement> as clickable text, directing the user to a dedicated glossary page. This is excellent for creating "See Also" links or a traditional glossary index.</dd>
+                </dlentry>
+            </dl>
+        </section>
+
+        <section id="empty-keyrefs-translation">
+            <title>The Pros of Empty Keyrefs -- And the Cons for Translation</title>
+            <p>The automatic rendering of empty <xmlatt>keyref</xmlatt> elements (like <codeph>&lt;term keyref="my-key"/&gt;</codeph> or <codeph>&lt;abbreviated-form keyref="my-key"/&gt;</codeph>) is a developer's dream. It ensures unparalleled terminology consistency: update your glossentry, and every instance updates automatically.</p>
+            <p>However, this automation often clashes with the realities of human language translation.</p>
+            <ul>
+                <li><b>What the translator sees</b>: In a typical Computer-Assisted Translation (CAT) tool, an empty <codeph>&lt;term keyref="my-key"/&gt;</codeph> often appears as a generic placeholder tag (e.g., <codeph>&lt;ph id="1"/&gt;</codeph>). The translator loses the crucial linguistic context -- the actual word that will appear in that spot.</li>
+                <li><b>The grammar issue</b>: Most languages are highly inflected, meaning nouns, adjectives, and verbs change their endings based on gender, number, and grammatical case.
+                    <p>For example, if an English sentence uses "using a virtual environment" and the DITA source is <codeph>using a &lt;term keyref="virtual_env"/&gt;</codeph>, an empty tag means the CAT tool provides no word for the translator. When the German translator sees <codeph>using a &lt;ph id="1"/&gt;</codeph>, they cannot correctly decline the adjective "virtual" or the noun "environment" for the correct grammatical context (e.g., "virtuellen Umgebung"). The DITA-OT would simply insert the bare, nominative form from the glossentry, resulting in grammatically incorrect or awkward sentences.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="pragmatic-solution">
+            <title>The Pragmatic Solution: Context for Quality Localization</title>
+            <p>For optimal translatability, the best practice is to provide the source term within the <xmlelement>term</xmlelement> tag, even when using <xmlatt>keyref</xmlatt>:</p>
+            <codeblock>&lt;p&gt;Using a &lt;term keyref="virtual_env"&gt;virtual environment&lt;/term&gt; requires...&lt;/p&gt;</codeblock>
+            <p>This approach is superior for localization because:</p>
+            <ul>
+                <li><b>Clear context</b>: The translator sees "virtual environment" directly within the sentence, allowing them to apply the correct grammatical inflections for their target language.</li>
+                <li><b>Hover/linking intact</b>: The <xmlatt>keyref</xmlatt> attribute still functions perfectly, providing the hover definition or linking to the glossary page. The translation tool will typically treat <xmlatt>keyref</xmlatt> as an inline tag, preserving it while allowing the enclosed text to be translated.</li>
+                <li><b>Reduced rework</b>: This significantly reduces post-translation editing for grammatical errors, saving time and cost in the localization workflow.</li>
+            </ul>
+            <p>While the automation of empty <xmlatt>keyref</xmlatt> tags is tempting for consistency, the need for accurate, grammatically correct translations in diverse languages usually outweighs this benefit. Prioritizing clear linguistic context for human translators through thoughtfully applied DITA structures ensures both precise terminology management and high-quality localized content for your global audience.</p>
+        </section>
+    </body>
+</topic>

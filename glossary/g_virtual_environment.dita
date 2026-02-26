@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "glossentry.dtd">
+<concept id="g_virtual_environment">
+    <title>Concept Title</title>
+    <shortdesc>Brief description of this concept.</shortdesc>
+    <conbody>
+        <p>Conceptual information goes here.</p>
+        <section>
+            <title>Section Title</title>
+            <p>Additional conceptual information.</p>
+        </section>
+    </conbody>
+</concept>

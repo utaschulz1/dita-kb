@@ -8,8 +8,9 @@
             <created date="2026-02-24"/>
         </critdates>
         <metadata>
-            <category>Dev Setup</category>
+            <category>Setup</category>
             <category>Mental Model</category>
+            <audience type="user" job="using" experiencelevel="novice"/>
         </metadata>
     </prolog>
     <shortdesc>In this section you will learn to look at programming languages (Python), the ubiquitous libraries (spaCy, Pandas) and functions like you'd look at any other software with menus and buttons.</shortdesc>
@@ -35,6 +36,7 @@
             <p>Each line of code is one instruction in that sequence. There can be many lines. Lines that start with # are comments and are ignored by the computer.</p>
             <codeblock language="python">
                 # Example of a simple term extraction script
+
                 # First, tell the program which libraries you want to use
                 import spacy
                 from collections import Counter

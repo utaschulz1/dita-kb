@@ -19,29 +19,32 @@
     <topicgroup>
         <topicmeta><navtitle>1. Changing How You See Code</navtitle></topicmeta>
         <topicref href="topics/dev-setup/c_code_as_software.dita" type="concept"/>
+        <topicref href="topics/dev-setup/c_good_installation_practices.dita" type="taskd"/>
     </topicgroup>
 
-    <!-- LESSON 2: The Workspace -->
+    <!-- LESSON 2: Environments (The Scary Stuff Demystified) -->
     <topicgroup>
-        <topicmeta><navtitle>2. Setting Up Your Workspace (VS Code)</navtitle></topicmeta>
+        <topicmeta><navtitle>2. Package Managers &amp; Environments</navtitle></topicmeta>
+        <topicref href="topics/dev-setup/c_package_managers_and_terminals.dita" type="concept"/>
+        <topicref href="topics/dev-setup/c_why_virtual_environments.dita" type="concept"/>
+    </topicgroup>
+
+    <!-- LESSON 3: The Workspace -->
+    <topicgroup>
+        <topicmeta><navtitle>3. Setting Up Your Workspace (VS Code)</navtitle></topicmeta>
         <topicref href="topics/dev-setup/c_editors_vs_terminals.dita" type="concept"/>
         <topicref href="topics/dev-setup/t_install_vscode.dita" type="task"/>
         <topicref href="topics/dev-setup/t_install_python_extension.dita" type="task"/>
     </topicgroup>
 
-    <!-- LESSON 3: Getting Files -->
+    <!-- LESSON 4: Getting Files -->
     <topicgroup>
-        <topicmeta><navtitle>3. Getting the Practice Files</navtitle></topicmeta>
+        <topicmeta><navtitle>4. Getting the Practice Files</navtitle></topicmeta>
         <topicref href="topics/dev-setup/t_setup_local_folder.dita" type="task"/>
         <topicref href="topics/dev-setup/t_clone_repo.dita" type="task"/>
     </topicgroup>
 
-    <!-- LESSON 4: Environments (The Scary Stuff Demystified) -->
-    <topicgroup>
-        <topicmeta><navtitle>4. Package Managers &amp; Environments</navtitle></topicmeta>
-        <topicref href="topics/dev-setup/c_package_managers_and_terminals.dita" type="concept"/>
-        <topicref href="topics/dev-setup/c_why_virtual_environments.dita" type="concept"/>
-    </topicgroup>
+    
 
     <!-- LESSON 5: Installation Tasks -->
     <topicgroup>

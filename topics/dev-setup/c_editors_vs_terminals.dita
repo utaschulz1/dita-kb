@@ -8,10 +8,10 @@
             <created date="2026-02-24"/>
         </critdates>
         <metadata>
-            <category>Dev Setup</category>
-            <category>Workspace</category>
+            <category>setup</category>
         </metadata>
     </prolog>
+    <shortdesc>In this section you will learn about the two main tools you will use to work with code: the code editor (VS Code) and the terminal (integrated in VS Code).</shortdesc>
     <conbody>
         <p>VS Code is your workspace. It combines two separate tools that you will use throughout this course: a <b>code editor</b> and a <b>terminal</b>.</p>
         <section id="the-editor">

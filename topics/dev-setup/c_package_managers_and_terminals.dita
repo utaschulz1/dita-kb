@@ -24,7 +24,7 @@
         </section>
         <example id="install-example">
             <title>Example: Installing a Package with Conda</title>
-            <codeblock>conda install spacy</codeblock>
+            <codeblock outputclass="language-python">conda install spacy</codeblock>
             <p>This single command downloads and installs the spaCy NLP library and all its dependencies.</p>
         </example>
     </conbody>
