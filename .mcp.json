@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcp_dita-specs": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "-u", "src/server.py"],
+      "cwd": "/home/hpz440/projects/mcp_dita-specs"
+    }
+  }
+}
