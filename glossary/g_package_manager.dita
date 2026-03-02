@@ -2,11 +2,5 @@
 <!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "../dtd/glossary.dtd">
 <glossentry id="wmd" xml:lang="en">
   <glossterm>package manager</glossterm>
-  <glossdef>A tool that automates the installation, updating, and removal of software packages.</glossdef>
-  <glossBody>
-    <glossSurfaceForm>package manager</glossSurfaceForm>
-    <glossAlt>
-      <glossAcronym></glossAcronym>
-    </glossAlt>
-  </glossBody>
+  <glossdef>A tool that automates the installation, updating, and removal of software packages. Examples are Conda and pip for Python or npm for JavaScript.</glossdef>
 </glossentry>

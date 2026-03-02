@@ -13,9 +13,9 @@
             <audience type="user" job="using" experiencelevel="novice"/>
         </metadata>
     </prolog>
-    <shortdesc>In this section you will learn to look at programming languages (Python), the ubiquitous libraries (spaCy, Pandas) and functions like you'd look at any other software with menus and buttons.</shortdesc>
+    <shortdesc>In this section you will learn to look at programming languages (like Python), the ubiquitous concept of libraries (like spaCy, Pandas) and functions like you would look at any other software with menus and buttons.</shortdesc>
     <conbody>
-        <p>Code is a set of precise instructions written in a language a computer can execute — but not directly. Before the processor understands the code, it must be translated into low-level machine language — through many layers. The code in a programming language is already a very high-level layer, just about one or two layers lower than a graphical software interface.</p>
+        <p>Code is a set of precise instructions written in a language a computer can execute — but not directly. Before the processor understands the code, it must be translated into low-level machine language — through many layers. The code you see in a programming language like Python is already a very high-level layer. Consider it to  be just about one or two layers lower than a graphical software interface.</p>
         <p>The difference between a graphical software interface and code is that code can be used to build many software applications. A graphical software interface, on the other hand, has its usecases built in.</p>
         <p>However, to write code in Python, you need to install a software — Python version 3.12 in our case — just as you would install any other software on your computer. If you want more features, you can install additional libraries (packages), just as you would install an addtional plugin in MS Word or your CAT tool.</p>
 

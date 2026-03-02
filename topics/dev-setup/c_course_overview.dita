@@ -19,13 +19,13 @@
         <section id="what-you-will-learn">
             <title>What You Will Learn</title>
             <ul>
-                <li>How to think about code as a tool, not a mystery</li>
-                <li>How to set up VS Code as your working environment</li>
-                <li>How to download practice files from GitHub</li>
-                <li>How to install Python and the required NLP packages</li>
-                <li>How to read error messages and fix common problems</li>
-                <li>How to activate GitHub Copilot to assist you</li>
-                <li>How to run a script on your file</li>
+                <li>Think about code as a tool, not a mystery</li>
+                <li>Set up VS Code as your working environment</li>
+                <li>Download course files from GitHub</li>
+                <li>Install Python and the required NLP packages</li>
+                <li>Read error messages and fix common problems</li>
+                <li>Activate GitHub Copilot to assist you</li>
+                <li>Run a script on your file</li>
             </ul>
         </section>
         <section id="prerequisites">

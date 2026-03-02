@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_package_managers_and_terminals">
-    <title>Package Managers and Terminals</title>
+    <title>Package Manager and the Terminal</title>
     <prolog>
         <author type="creator">Uta Schulz</author>
         <critdates>
             <created date="2026-02-24"/>
         </critdates>
         <metadata>
-            <category>Dev Setup</category>
+            <category>Setup</category>
             <category>Package Management</category>
         </metadata>
     </prolog>
